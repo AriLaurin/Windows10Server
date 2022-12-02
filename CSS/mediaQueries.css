@@ -1,0 +1,81 @@
+@media only screen and (max-width: 1012px) {
+    .center {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 0.55fr 0.2fr 0.2fr 0.2fr; 
+        gap: 0px 20px; 
+        grid-template-areas: 
+          ". centerOverhead centerOverhead ."
+          ". center-listL center-listL ."
+          ". center-listR center-listR ." 
+          ". center-bottom center-bottom .";
+        grid-area: center;
+        background: #302B27;
+      }
+      #quizButton{
+        margin-top: 5vh;
+        margin-left: 0vw;
+      }
+  }
+
+  @media only screen and (max-width: 668px) {
+    .center {
+        display: grid; 
+        grid-template-columns: 1fr 5fr 1fr 1fr; 
+        grid-template-rows: 0.55fr 0.2fr 0.2fr 0.2fr; 
+        gap: 0px 20px; 
+        grid-template-areas: 
+          ". centerOverhead centerOverhead ."
+          ". center-listL center-listL ."
+          ". center-listR center-listR ." 
+          ". center-bottom center-bottom .";
+        grid-area: center;
+        background: #302B27;
+      }
+      #quizButton{
+        margin-top: 5vh;
+        margin-left: 0vw;
+      }
+  }
+
+  @media only screen and (max-width: 428px) {
+    .center {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 10fr 1fr; 
+        grid-template-rows: 0.55fr 0.2fr 0.2fr 0.2fr; 
+        gap: 0px 20px; 
+        grid-template-areas: 
+          ". centerOverhead centerOverhead ."
+          ". center-listL center-listL ."
+          ". center-listR center-listR ." 
+          ". center-bottom center-bottom .";
+        grid-area: center;
+        background: #302B27;
+      }
+      #quizButton{
+        margin-top: 5vh;
+        margin-left: 0vw;
+      }
+
+      .LinkBox{
+        grid-area: center;
+        width:18.8em;
+        background:#7D1128;
+        color:#F4F2F3;
+        font-family: 'Catamaran', sans-serif;
+        font-weight: none;
+        font-size: 16px;
+        padding: 1em;
+        transition: ease 0.5s;
+        margin-bottom: 1.5em;
+    }
+    
+    .LinkBox:hover{
+        border-color:#F4F2F3;
+        background: #F4F2F3;
+        color: #7D1128;
+        font-size: 17px;
+        box-shadow: #F4F2F3 0px 0px 0px 2px inset, #7D1128 10px -10px 0px -3px, #7D1128 10px -10px;
+    }
+    
+  }

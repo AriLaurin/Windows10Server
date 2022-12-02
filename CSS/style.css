@@ -1,3 +1,4 @@
+
 .css-transitions-only-after-page-load * {
     -webkit-transition: none !important;
     -moz-transition: none !important;
@@ -8,10 +9,11 @@
 
 .gridstyle {  display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.1fr 3fr 0.95fr;
+    grid-template-rows: 0.2fr 0.1fr 5fr 0.95fr;
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 0px 0px;
+    height: 100vh;
     grid-auto-flow: row;
     grid-template-areas:
       "navbar"
@@ -49,20 +51,32 @@
   .center {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-rows: 0.55fr 0.2fr 0.2fr; 
     gap: 0px 20px; 
-    max-height: 100%;
     grid-template-areas: 
-      ". . . ."
+      ". centerOverhead centerOverhead ."
       ". center-listL center-listR ."
-      ". . . ."; 
+      ". center-bottom center-bottom ."; 
     grid-area: center;
     background: #302B27;
+  }
+
+  .centerOverhead{
+    grid-area: centerOverhead;
   }
   .center-listL {
      grid-area: center-listL;
      }
   .center-listR { grid-area: center-listR; }
+
+  .center-bottom{
+    grid-area: center-bottom;
+  }
+
+  #quizButton{
+    margin-top: 5vh;
+    margin-left: 13vw;
+  }
   
   .footer {  display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -79,7 +93,11 @@
   
   .F1 { grid-area: F1; }
   
-  .F2 { grid-area: F2; }
+  .F2 {
+     grid-area: F2;
+     display: grid;
+     place-items: center;
+     }
   
   .F3 { grid-area: F3; }
 
@@ -118,6 +136,21 @@ hr{
     padding: 0.5em;
 }
 
+.centerOverheadTitle{
+  color: #F4F2F3;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 13vh;
+}
+
+.centerOverheadPara{
+  color: #F4F2F3;
+  font-family: Karla;
+  font-size: 18px;
+  padding-bottom: 2.5vh;
+}
+
 .LinkBox{
     grid-area: center;
     width:28em;
@@ -137,4 +170,16 @@ hr{
     color: #7D1128;
     font-size: 17px;
     box-shadow: #F4F2F3 0px 0px 0px 2px inset, #7D1128 10px -10px 0px -3px, #7D1128 10px -10px;
+}
+
+
+#footerLogo{
+  width: 3em;
+  padding-top: 2vh;
+}
+
+#footer2Title{
+  color:#F4F2F3;
+  font-family: 'Catamaran', sans-serif;
+  padding-bottom: 3vh;
 }
