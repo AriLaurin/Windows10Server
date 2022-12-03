@@ -151,6 +151,10 @@ hr{
   padding-bottom: 2.5vh;
 }
 
+#overheadBR{
+  margin-bottom: 2vh;
+}
+
 .LinkBox{
     grid-area: center;
     width:28em;
