@@ -1,4 +1,3 @@
-
 .css-transitions-only-after-page-load * {
     -webkit-transition: none !important;
     -moz-transition: none !important;
@@ -186,4 +185,22 @@ hr{
   color:#F4F2F3;
   font-family: 'Catamaran', sans-serif;
   padding-bottom: 3vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*Info page navbar*/
+#returnTitle{
+  padding-top: 0.9vh;
+  padding-left: 2vw;
+  color:#F4F2F3;
+  font-family: 'Catamaran', sans-serif;
+  width: 120px;
+  transition: ease 0.5s;
+}
+
+#returnTitle:hover{
+  text-decoration: underline;
 }
