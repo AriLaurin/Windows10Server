@@ -7,7 +7,7 @@
 
     <!--CSS Links-->
     <link rel="stylesheet" href="../CSS/reset.css">
-    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/infopage.css">
     <link rel="stylesheet" href="../CSS/mediaQueries.css">
 
     <!--Fonts-->
@@ -28,7 +28,7 @@
     </div>
         </div>
         <div class="details">
-    <div class="return-box">
+    <div class="return-box">  
         <hr>
         <a href="../index.html">
             <p id="returnTitle"> <span id=returnArrow><</span> GÅ TILBAKE</p>
@@ -45,8 +45,40 @@
     </div>
         </div>
         <div class="center">
+            <div class="center-list">
+                <h1 class="centerTitle">OPPSETT AV WINDOWS 10 SERVER MASKIN</h1>
+                <hr id="centerLine">
+                <p class="centerUnderTitle">For å oppholde en windows 10 server, så trenger vi en server å faktisk oppholde. Her finner du hvordan vi lager en windows 10 maskin i vSphere, og installeringsprosessen.</p>
 
-            <h1>STEP ONE</h1>
+                <p class="centerUnderTitle">Følg nøye med her på hvordan man lager server-VM'en.</p>
+                <video class="infoVideos" controls>
+                    <source src="../IMG/VMWARE W10 Server oppsett.mp4" type=video/mp4>
+                  </video>
+
+                <p class="centerUnderTitle">Start ved å åpne den nye VM'en du har laget for Windows SERVEREN, ved å høyreklikke den i lista, naviger til <span class="boldText">«Power» </span>og trykk på <span class="boldText">«Power On»</span>.</p>
+                <img class="image" src="../IMG/s1.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Når VM’en har startet, så kan du åpne <span class="boldText">«Web Console»</span> i en ny fane.</p>
+                  <img class="image" src="../IMG/s2.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Når du har åpnet <span class="boldText">«Web Console»</span> så burde du være i EFI Boot-up menyen. Her kan vi da trykke på <span class="boldText">«EFI VMware Virtual SATA CDROM Drive (0.0)»</span>, hvis du ikke ser dette, så har du konfigurert VM’en din feil og må lage den på nytt.</p>
+                  <img class="image" src="../IMG/s3.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Når du har åpnet Etter at maskinen har lastet inn disken, så kommer du til <span class="boldText">«Windows Setup»</span>, her anbefaler jeg å velge et norsk tastatur format. Så kan du trykke på <span class="boldText">«next»</span> i nederst høyre hjørne og <span class="boldText">«Install Now»</span>.</p>
+                  <img class="image" src="../IMG/s4.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Nå er vi på det første steget for å lage serveren vår. Vi trenger ikke en Windows key for dette, så da er det bare å trykke på <span class="boldText">«I don’t have a product key»</span> for å komme deg videre.</p>
+                  <img class="image" src="../IMG/s5.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Her kan man velge forskjellige Windows operativ systemer, men vi skal velge <span class="boldText">«Windows Server 2019 Datacenter (Desktop Experience)»</span> for denne guiden. Så trykker du på <span class="boldText">«next»</span>. (Du kan også velge <span class="boldText">«Windows Server 2019 Datacenter»</span>, hvis du vil lage serveren kun gjennom en terminal.)</p>
+                  <img class="image" src="../IMG/s6.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Trykk videre på <span class="boldText">«Custom: Install Windows only (advanced)»</span> </p>
+                  <img class="image" src="../IMG/s7.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  
+                  
+            </div>
 
           </div>
             <!--End of Center-->
