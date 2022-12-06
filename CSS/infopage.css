@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .css-transitions-only-after-page-load * {
     -webkit-transition: none !important;
     -moz-transition: none !important;
@@ -237,3 +241,16 @@ a{
     padding-bottom: 10vh;
 }
 
+#ScrollBtn{
+  padding-top: 0.9vh;
+  padding-left: 22vw;
+  color:#F4F2F3;
+  font-family: 'Catamaran', sans-serif;
+  width: 165px;
+  transition: ease 0.5s;
+}
+
+#ScrollBtn:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
