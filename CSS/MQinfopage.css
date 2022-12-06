@@ -1,0 +1,92 @@
+@media only screen and (max-width: 1153px) {
+
+    .centerTitle{
+        font-size: 2.2em;
+    }
+    #centerLine{
+        width:45em;
+    }
+    .centerUnderTitle{
+        font-size: 1.5em;
+        max-width: 25em;
+    }
+    .infoVideos{
+        width: 30em;
+    }
+    .image{
+        width:32em;
+    }
+    .NextButton{
+        width:30em;
+    }
+  }
+
+  @media only screen and (max-width: 747px) {
+
+    .centerTitle{
+        font-size: 1.5em;
+    }
+    #centerLine{
+        width:31em;
+    }
+    .centerUnderTitle{
+        font-size: 1.2em;
+        max-width: 30em;
+    }
+    .infoVideos{
+        width: 28em;
+    }
+    .image{
+        width:28em;
+    }
+    .NextButton{
+        width:30em;
+    }
+  }
+
+  @media only screen and (max-width: 537px) {
+
+    .centerTitle{
+        font-size: 1.3em;
+    }
+    #centerLine{
+        width:27em;
+    }
+    .centerUnderTitle{
+        font-size: 1.1em;
+        max-width: 30em;
+    }
+    .infoVideos{
+        width: 25em;
+    }
+    .image{
+        width:25em;
+    }
+    .NextButton{
+        width:20em;
+    }
+  }
+
+@media only screen and (max-width: 384px) {
+
+    .centerTitle{
+        font-size: 1em;
+    }
+    #centerLine{
+        width:21em;
+    }
+    .centerUnderTitle{
+        font-size: 1em;
+        max-width: 20em;
+    }
+    .infoVideos{
+        width: 22em;
+    }
+    .image{
+        width:22em;
+    }
+    .NextButton{
+        width:19em;
+    }
+  }
+
