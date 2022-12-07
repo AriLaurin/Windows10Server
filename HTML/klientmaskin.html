@@ -63,17 +63,56 @@
                   <h1 class="centerTitle TSTitle">Vis video transkript >></h1>
                   <hr id="centerLine">
                   <p class="centerUnderTitle hidden transcript">Nå skal vi lage en windows 10 klientmaskin. Gå til ditt elevnummer, høyreklikk og klikk på ny virtuell maskin. På creation type så velger
-                    du create new virtual machine og next. Gi maskinen din et unikt navn. I location så velger du ikt-fag DS01. I computer resource så velger
+                    du create new virtual machine og next. Gi maskinen din et unikt navn. I location så velger du ikt-fag DS01. I compute resource så velger
                     du ditt elevnummer. I storage så velger du ikt fag. Compatibility kan du la stå som det er nå. Guest OS family så skal vi ha windows
-                    og i Guest OS versjon, så skal vi ha Microsoft Windows 10. Gå da til new harddisk, velg disk provisioning, og velg thin provision. Gå til
-                    new network.Og browse. Her skal du da velge ditt elevnummer. Sjekk at status er huket av på connect at power on.Gå til new CD/DVD Drive, 
+                    og i Guest OS versjon, så skal vi ha Microsoft Windows 10. Gå til new harddisk, velg disk provisioning, og velg thin provision. Gå til
+                    new network, og browse. Her skal du da velge ditt elevnummer. Sjekk at status er huket av på connect at power on. Gå til new CD/DVD Drive, 
                     og klikk på content library ISO. Her skal du velge Windows 10 multi. Sjekk at status er huket av på connect at power on. Gå til vm options,
-                    boot options, og huk av på force EFI setup. Sjekk at alt er riktig, og klikk på finish. Da har du sett opp en windows 10 klientmaskin.</p>
+                    boot options, og huk av på force EFI setup. Sjekk at alt er riktig, og klikk på finish. Da har du satt opp en windows 10 klientmaskin.</p>
 
                     <br>
                     <br>
                     <br>
                     <br>
+
+                    <p class="centerUnderTitle">Nå skal vi sette opp klient maskinen. Naviger til vSphere nettsiden, finn klient maskinen du lagde, skru den på og trykk på <span class="boldText">«Launch Web Console»</span>.</p>
+                    <img class="image" src="../IMG/s48.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Naviger ned til <span class="boldText">«EFI VMware Virtual SATA CDROM Drive (0.0)»</span>, og trykk på Enter.</p>
+                    <img class="image" src="../IMG/s49.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Når <span class="boldText">«Windows Setup»</span> dukker opp, så velger du ditt tastatur språk <span class="boldText">(jeg anbefaler at du velger norsk tastatur)</span>, så fortsetter du og trykker på <span class="boldText">«Install Now»</span>. </p>
+                    <img class="image" src="../IMG/s50.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Vi trenger ikke å activate Windows, så trykk på <span class="boldText">«I don’t have a product key»</span>.</p>
+                    <img class="image" src="../IMG/s51.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Når du skal velge et operativt system, så anbefaler jeg at du velger <span class="boldText">«Windows 10 Pro»</span>, for det er den som blir brukt mest. Etter det så trykker du på <span class="boldText">«Next»</span>.</p>
+                    <img class="image" src="../IMG/s52.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Når du skal velge installasjons type, velg <span class="boldText">«Custom: Install Windows only (advanced)»</span>.</p>
+                    <img class="image" src="../IMG/s53.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Hvis alt ser likt ut som på bildet, så trykker du på <span class="boldText">«Next»</span> igjen.</p>
+                    <img class="image" src="../IMG/s54.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Nå er det bare å vente på at maskinen installerer Windows.</p>
+                    <img class="image" src="../IMG/s55.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Når du har kommet fram til windows basics installelasjonen, så er det ikke så viktig hva du velger. Så da er det bare å skrive inn alt som er nødvending som windows kommer til å spørre etter, og fortsett videre helt til du er ferdig.</p>
+                    <img class="image" src="../IMG/s56.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                    <p class="centerUnderTitle">Når klient maskinen er ferdig installert, og serveren har blitt satt opp riktig, så bør du allerede se at klienten er allerede koblet til nettverket som vi lagde. Hvis ikke, sjekk at du har fulgt alle stegene riktig. Hvis du har gjort noe feil så må du desverre gå gjennom hele prosessen av å sette opp serveren og klienten på nytt.</p>
+                    <img class="image" src="../IMG/s73.png" alt="Bilde visning av det som blir sagt på tekst">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="centerUnderTitle">Fortsett til neste steg</p>
+                    <a href="../HTML/IISFTP.html">
+                      <div class="LinkBox NextButton">7.  >> INSTALLERE IIS & FTP</div>
+                  </a>
             </div>
 
           </div>

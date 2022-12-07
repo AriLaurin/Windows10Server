@@ -51,9 +51,39 @@
         </div>
         <div class="center">
             <div class="center-list">
-                <h1 id="titleThin" class="centerTitle">HOVED TITEL</h1>
+                <h1 id="titleThin" class="centerTitle">INSTALLERE IIS & FTP</h1>
                 <hr id="centerLine">
-                <p class="centerUnderTitle">Undertittel, beskrivelse</p>
+                <p class="centerUnderTitle">Lær hvordan man setter opp IIS (Internet Information Services), og FTP (File Transfer Protocol). IIS er windows sitt system for å hoste nettsider. Hvis du er kjent med Ubuntu og Apache, så er IIS det samme som Apache. FTP er hvordan vi kan se filsystemet til serveren vår fra hovedpcen, og sende filer til serveren. Dette trenger vi for at vi kan kode nettsiden vår på hovedpcen, også gi serveren filene til nettsiden.</p>
+
+                <p class="centerUnderTitle">Nå skal vi sette opp en IIS Server så vi kan hoste en nettside på serveren. Dette gjør vi ved å først; gå tilbake til server maskin VM’en, naviger til Dashboard og trykk på <span class="boldText">«Add roles and features»</span>.</p>
+                <img class="image" src="../IMG/s74.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Så navigerer du til <span class="boldText">«Server Roles»</span>, ved å trykke på <span class="boldText">«next»</span>. Her finner du <span class="boldText">«Web Server (IIS)»</span>, som er akkurat det vi trenger. Trykk på den og trykk på <span class="boldText">«Add Features»</span>. </p>
+                <img class="image" src="../IMG/s75.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Naviger til <span class="boldText">«Role Services»</span> og finn «FTP Server» i <span class="boldText">«Role Services»</span> lista. Legg til den ved å trykke på den og sjekk at <span class="boldText">«FTP Service»</span> er også huket av. Til slutt så trykker du på <span class="boldText">«Next»</span> og trykk på <span class="boldText">«Install»</span>. <span class="boldText">(RESTART MASKINEN ETTER INSTALLESJONEN)</span></p>
+                <img class="image" src="../IMG/s76.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Nå må vi konfigurere FTP for å sette opp web serveren. Begynn med å åpne opp <span class="boldText">«Internet Information Serivces (IIS) Manger»</span>, som du finner i <span class="boldText">«Tools»</span>.</p>
+                <img class="image" src="../IMG/s77.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når IIS panelen åpner seg, så navigerer du til servermaskinen din på venstre siden i listen, og trykk på pil ikonet. Der finner du <span class="boldText">«Sites»</span> med en pil ved siden av den, som du også trykker på. Så finner du <span class="boldText">«Default Web Site»</span>, høyre klikk på den, og trykk på <span class="boldText">«Add FTP Publishing…»</span>.</p>
+                <img class="image" src="../IMG/s78.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Her skal du legge inn IP Addressen til web serveren, trykk på pil ikonet ved <span class="boldText">«IP Address»</span> boksen, så anbefaler serveren IP’en din automatisk. Trykk på den og sjekk at porten er på 21. Deretter så huker du av <span class="boldText">«No SSL»</span> og fortsetter ved å trykke på <span class="boldText">«Next»</span>.</p>
+                <img class="image" src="../IMG/s79.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Huk av på <span class="boldText">«Anonymous»</span> og <span class="boldText">«Basic»</span> Authentication her, så nedefor på <span class="boldText">«Allow access to:»</span>, velg <span class="boldText">«All Users»</span>. Under der igjen, huker du av på <span class="boldText">«Read»</span> og <span class="boldText">«Write»</span>, og til slutt så trykker du på <span class="boldText">«Finish»</span>.</p>
+                <img class="image" src="../IMG/s80.png" alt="Bilde visning av det som blir sagt på tekst">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="centerUnderTitle">Fortsett til neste steg</p>
+                <a href="../HTML/filezilla.html">
+                    <div class="LinkBox NextButton">8.  >> HVORDAN KOBLE TIL OG BRUKE FILEZILLA</div>
+                </a>
             </div>
 
           </div>
