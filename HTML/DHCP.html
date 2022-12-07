@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--Scripts-->
+        <script defer src="../JS/script.js"></script>
+
+
     <!--CSS Links-->
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/infopage.css">
-    <link rel="stylesheet" href="../CSS/mediaQueries.css">
+    <link rel="stylesheet" href="../CSS/MQinfopage.css">
 
     <!--Fonts-->
     <style>
@@ -42,13 +46,82 @@
 
     <div class="right-box">
         <hr>
+        <p id="ScrollBtn" onclick="topFunction()" title="Go to top">< TILBAKE TIL TOPPEN ></p>
     </div>
         </div>
         <div class="center">
             <div class="center-list">
-                <h1 id="titleThin" class="centerTitle">HOVED TITEL</h1>
+                <h1 id="titleThin" class="centerTitle">INSTALLERE DHCP</h1>
                 <hr id="centerLine">
-                <p class="centerUnderTitle">Undertittel, beskrivelse</p>
+                <p class="centerUnderTitle">DHCP (Dynamic Host Configuration Protocol) blir brukt til å spre IP'er til andre maskiner som kobler til nettverket.</p>
+
+                <p class="centerUnderTitle">Nå skal vi installere DHCP, naviger til Dashboard og trykk på <span class="boldText">«Add roles and features».</span></p>
+                <img class="image" src="../IMG/s33.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når <span class="boldText">«Server Roles»</span> fanen er åpen, trykk på next, helt til du kommer til <span class="boldText">«Server Roles»</span> lista. Her trykker du på <span class="boldText">«DHCP Server»</span>, også trykker du på <span class="boldText">«Add Features»</span>.</p>
+                <img class="image" src="../IMG/s34.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Trykk på <span class="boldText">«Next»</span> helt til du kommer til <span class="boldText">«Confirmation»</span> hvor du da kan trykke på <span class="boldText">«Install»</span>. Jeg anbefaler at du også trykker på <span class="boldText">«Restart the destination server automatically if required»</span>, for å oppdatere serveren.</p>
+                <img class="image" src="../IMG/s35.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når DHCP er ferdig installert, så navigerer du til DHCP fanen i server manager. Her trykker du på <span class="boldText">«More…»</span> som ligger i den gule varsels boksen, også trykker du på <span class="boldText">«Complete DHCP configuration»</span>.</p>
+                <img class="image" src="../IMG/s36.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Her skal <span class="boldText">«Post Install Configuration Wizard»</span> komme opp, da trykker du bare på <span class="boldText">«Next»</span>, så du kommer til <span class="boldText">«Authorization»</span> fanen. Sjekk at <span class="boldText">«Use the following user’s credentials»</span> er huket av, og har et brukernavn. Ikke huk av på noe annet, og trykk på <span class="boldText">«Commit»</span>.</p>
+                <img class="image" src="../IMG/s37.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når DHCP er ferdig konfigurert, så navigerer du til <span class="boldText">«Tools»</span> i øverst høyre hjørne i Server Manager, også trykker du på <span class="boldText">«DHCP»</span>.</p>
+                <img class="image" src="../IMG/s38.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Naviger ned server lista i DHCP fanen, og finn <span class="boldText">«IPv4»</span>. Trykk på den, også høyreklikk den, hvor du da kan trykke på <span class="boldText">«New Scope…»</span>.</p>
+                <img class="image" src="../IMG/s39.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Her skal <span class="boldText">«New Scope Wizard»</span> åpne, trykk på next så du kan angi et <span class="boldText">«Scope Name»</span>. Gi den et valgfritt navn og trykk på <span class="boldText">«Next»</span>.</p>
+                <img class="image" src="../IMG/s40.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Her må du stille in en IP range for nettverket, så skriv som følgende;</p>
+                <p class="centerUnderTitle">
+                    <br><span class="boldText">Start IP Address:</span> 10.12.(elevnr).2
+                    <br><span class="boldText">End IP Address:</span> 10.12.(elevnr).254
+                    <br><span class="boldText">Length:</span> 24
+                    <br><span class="boldText">Subnet Mask:</span> 255.255.255.0
+                    <br>Etter det, så trykker du på <span class="boldText">«Next»</span> for å gå videre.
+
+                </p>
+                <img class="image" src="../IMG/s41.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Du skal IKKE ekskludere noen IP’er, så da er det bare å trykke på <span class="boldText">«Next»</span> her.</p>
+                <img class="image" src="../IMG/s42.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når du er her, så kan du velge <span class="boldText">«Lease Duration»</span>, jeg anbefaler at du lar den stå som den er (8 dager). Så trykker du bare på <span class="boldText">«Next»</span> igjen.</p>
+                <img class="image" src="../IMG/s43.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Trykk på <span class="boldText">«Yes, I want to configure these options now»</span> og fortsett ved å trykke på <span class="boldText">«Next»</span>.</p>
+                <img class="image" src="../IMG/s44.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">
+                    <br>Her skal du skrive inn Default Gateway IP’en, som er da som følgende;
+                    <br>
+                    <br>10.12.(elevnr).1
+                    <br>Trykk på <span class="boldText">«Add»</span>, også fortsett ved å trykke på <span class="boldText">«Next»</span>.
+
+                </p>
+                <img class="image" src="../IMG/s45.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Hvis domenet til serveren dukker opp, og IP’en. Så er det bare å trykke på <span class="boldText">«Next»</span> helt til du kommer til <span class="boldText">«Finish»</span>. (Trykk da på <span class="boldText">«Finish»</span> når du kan)</p>
+                <img class="image" src="../IMG/s46.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Hvis du ser Scope mappen inni IPv4 listen, så har du ferdig installert DHCP.</p>
+                <img class="image" src="../IMG/s47.png" alt="Bilde visning av det som blir sagt på tekst">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="centerUnderTitle">Fortsett til neste steg</p>
+                <a href="../HTML/klientmaskin.html">
+                    <div class="LinkBox NextButton">6.  >> OPPSETT AV KLIENT MASKIN & NETTVERK</div>
+                </a>
             </div>
 
           </div>

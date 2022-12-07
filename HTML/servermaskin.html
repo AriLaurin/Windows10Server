@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--Scripts-->
+        <script defer src="../JS/script.js"></script>
+
+
     <!--CSS Links-->
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/infopage.css">
-    <link rel="stylesheet" href="../CSS/mediaQueries.css">
+    <link rel="stylesheet" href="../CSS/MQinfopage.css">
 
     <!--Fonts-->
     <style>
@@ -42,13 +46,14 @@
 
     <div class="right-box">
         <hr>
+        <p id="ScrollBtn" onclick="topFunction()" title="Go to top">< TILBAKE TIL TOPPEN ></p>
     </div>
         </div>
         <div class="center">
             <div class="center-list">
                 <h1 class="centerTitle">OPPSETT AV WINDOWS 10 SERVER MASKIN</h1>
                 <hr id="centerLine">
-                <p class="centerUnderTitle">For å oppholde en windows 10 server, så trenger vi en server å faktisk oppholde. Her finner du hvordan vi lager en windows 10 maskin i vSphere, og installeringsprosessen.</p>
+                <p class="centerUnderTitle">For å oppholde en windows 10 server, så trenger vi en server å faktisk oppholde. Her finner du hvordan vi lager en windows 10 maskin i vSphere, og installeringsprosessen. I tillegg så skal du også lære hvordan man lager lokal brukere.</p>
 
                 <p class="centerUnderTitle">Følg nøye med her på hvordan man lager server-VM'en.</p>
                 <video class="infoVideos" controls>
@@ -64,7 +69,7 @@
                   <p class="centerUnderTitle">Når du har åpnet <span class="boldText">«Web Console»</span> så burde du være i EFI Boot-up menyen. Her kan vi da trykke på <span class="boldText">«EFI VMware Virtual SATA CDROM Drive (0.0)»</span>, hvis du ikke ser dette, så har du konfigurert VM’en din feil og må lage den på nytt.</p>
                   <img class="image" src="../IMG/s3.png" alt="Bilde visning av det som blir sagt på tekst">
 
-                  <p class="centerUnderTitle">Når du har åpnet Etter at maskinen har lastet inn disken, så kommer du til <span class="boldText">«Windows Setup»</span>, her anbefaler jeg å velge et norsk tastatur format. Så kan du trykke på <span class="boldText">«next»</span> i nederst høyre hjørne og <span class="boldText">«Install Now»</span>.</p>
+                  <p class="centerUnderTitle">Etter at maskinen har lastet inn disken, så kommer du til <span class="boldText">«Windows Setup»</span>, her anbefaler jeg å velge et norsk tastatur format. Så kan du trykke på <span class="boldText">«next»</span> i nederst høyre hjørne og <span class="boldText">«Install Now»</span>.</p>
                   <img class="image" src="../IMG/s4.png" alt="Bilde visning av det som blir sagt på tekst">
 
                   <p class="centerUnderTitle">Nå er vi på det første steget for å lage serveren vår. Vi trenger ikke en Windows key for dette, så da er det bare å trykke på <span class="boldText">«I don’t have a product key»</span> for å komme deg videre.</p>
@@ -75,6 +80,61 @@
 
                   <p class="centerUnderTitle">Trykk videre på <span class="boldText">«Custom: Install Windows only (advanced)»</span> </p>
                   <img class="image" src="../IMG/s7.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Hvis alt ser likt ut her, så trykker du på <span class="boldText">«next»</span>.</p>
+                  <img class="image" src="../IMG/s8.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Etter at Windows har installert, så kommer du til <span class="boldText">«Customize Settings»</span>. Her er brukernavnet ditt allerede laget, men dette skal vi endre senere. Men, du må nå skrive inn et passord som du må huske til senere. Så trykker du på <span class="boldText">«Finish»</span>.</p>
+                  <img class="image" src="../IMG/s9.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Etter du har logget inn med brukeren din, så skal <span class="boldText">«Server Manager»</span> åpnes automatisk. Sjekk nå om  <span class="boldText">«File and Storage Services»</span>, og <span class="boldText">«Local Server»</span> er grønne. Hvis ikke, tast in <span class="boldText">«sfc/scannow»</span> på command line for å forsøke å reparere serveren. Hvis dette ikke funker, så kan det hende at du har error kode <span class="boldText">«41»</span>. Dette er en kritisk feil I maskinen som ender med at du må lage serveren på nytt. Men, hvis alt er grønt, så kan vi fortsette.</p>
+                  <img class="image" src="../IMG/s10.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <h1 class="centerTitle">KONFIGURASJON AV LOKAL BRUKER</h1>
+                  <hr id="centerLine">
+
+                  <p class="centerUnderTitle">Nå skal vi lage en lokal bruker, som klient maskinen etter hvert kan bruke som en konto. Naviger til <span class="boldText">«Tools»</span>, og <span class="boldText">«Computer Management»</span>.</p>
+                  <img class="image" src="../IMG/s11.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Naviger til og trykk på <span class="boldText">«Local Users, and Groups»</span>. Så trykker du igjen på <span class="boldText">«Users»</span> mappen, også kan du høyreklikke mappen, for å lage en ny bruker.</p>
+                  <img class="image" src="../IMG/s12.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Nå må du fylle ut brukernavn og passord feltet for brukeren, men du kan også legge på litt ekstra informasjon hvis du vil. Hvis <span class="boldText">«User must change password at next logon»</span>, er huket, huk den av. Vi vil helst bruke passordet som vi nettopp lagde for brukeren. Til slutt så trykker du på <span class="boldText">«Create»</span>.</p>
+                  <img class="image" src="../IMG/s13.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Nå kan vi gi administrator tilgang til denne brukeren. Dette gjør vi ved å finne brukeren vi nettopp lagde i <span class="boldText">«Users»</span> mappen, høyreklikk den, og trykk på <span class="boldText">«Properties»</span>.</p>
+                  <img class="image" src="../IMG/s14.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Når du har åpnet <span class="boldText">«Properties»</span>, så navigerer du til <span class="boldText">«Member Of»</span>, og trykker på <span class="boldText">«Add…»</span>. Da kan du finne <span class="boldText">«Enter the object names to select»</span>, og skriver in <span class="boldText">«Administrators»</span> her. IKKE TRYKK PÅ <span class="boldText">«OK»</span> ENDA.</p>
+                  <img class="image" src="../IMG/s15.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Trykk på <span class="boldText">«Check Names»</span>. Hvis objekt navnet nå har endret seg til noe lignende som på bildet, og har en bindestrek, så kan du trykke på <span class="boldText">«OK»</span> og <span class="boldText">«Apply»</span> når den ikke er grå lenger.</p>
+                  <img class="image" src="../IMG/s16.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Samtidig så kan vi endre brukernavnet til hoved administrator brukeren som jeg nevnte at vi skulle gjøre før. Dette gjør vi ved å finne <span class="boldText">«Administrators»</span> i <span class="boldText">«Users»</span> mappen, høyreklikker den, og trykker på <span class="boldText">«Rename»</span>.</p>
+                  <img class="image" src="../IMG/s17.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Her kan du taste inn det nye brukernavnet, du kan for eksempel skrive <span class="boldText">«dittbrukernavn-Admin»</span>.</p>
+                  <img class="image" src="../IMG/s18.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <p class="centerUnderTitle">Nå kan vi også endre navnet på maskinen <span class="boldText">(computer name)</span>. For å gjøre dette så navigerer du til <span class="boldText">«Local Server»</span> i Server Manager, så trykker du på navnet ved siden av <span class="boldText">«Computer Name»</span>, så kommer <span class="boldText">«System Properties»</span> til å åpne. Trykk på <span class="boldText">«Change…»</span> og skriv in valgfritt navn for maskinen innafor <span class="boldText">«Computer name»</span>. Til slutt så trykker du på <span class="boldText">«OK»</span>. <span class="boldText">(RESTART MASKINEN OG SJEKK OM DET NYE NAVNET STÅR I SERVER MANAGER)</span></p>
+                  <img class="image" src="../IMG/s19.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                  <h1 class="centerTitle">OBS; HAR DU LAGT MERKE TIL DETTE?</h1>
+                  <hr id="centerLine">
+                  <p class="centerUnderTitle">OBS: Hvis du får 4 Service errors på «Local Server» og «All Servers», så er det bare å åpne services på en av de to, høyreklikke error meldingen, og trykk på «Start Services». Det kan hende det tar litt tid før den starter opp igjen, men dette fikser problemet etter hvert.</p>
+                  <hr id="centerLine">
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <p class="centerUnderTitle">Fortsett til neste steg</p>
+                  <a href="../HTML/statiskIP.html">
+                    <div class="LinkBox NextButton">2.  >> KOBLE SERVEREN OPP TIL INTERNETT MED STATISK IP</div>
+                </a>
+
+
 
                   
                   

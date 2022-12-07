@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--Scripts-->
+        <script defer src="../JS/script.js"></script>
+
+
     <!--CSS Links-->
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/infopage.css">
-    <link rel="stylesheet" href="../CSS/mediaQueries.css">
+    <link rel="stylesheet" href="../CSS/MQinfopage.css">
 
     <!--Fonts-->
     <style>
@@ -42,13 +46,43 @@
 
     <div class="right-box">
         <hr>
+        <p id="ScrollBtn" onclick="topFunction()" title="Go to top">< TILBAKE TIL TOPPEN ></p>
     </div>
         </div>
         <div class="center">
             <div class="center-list">
-                <h1 id="titleThin" class="centerTitle">HOVED TITEL</h1>
+                <h1 id="titleThin" class="centerTitle">KOBLE SERVEREN OPP TIL INTERNETT MED STATISK IP</h1>
                 <hr id="centerLine">
-                <p class="centerUnderTitle">Undertittel, beskrivelse</p>
+                <p class="centerUnderTitle">Vi bruker manuell konfigurering for å sette opp serveren til internettet.</p>
+
+                <p class="centerUnderTitle">Nå skal vi sette opp en statisk IP, for å koble serveren opp med internettet. Dette gjør vi ved å navigere til <span class="boldText">«Local Server»</span>, og trykk på lenken ved siden av <span class="boldText">«Ethernet0»</span>.</p>
+                <img class="image" src="../IMG/s20.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når <span class="boldText">«Network Connections»</span> åpner, så høyreklikker du <span class="boldText">«Ethernet0»</span> og trykker på <span class="boldText">«Properties»</span>. Dette åpner <span class="boldText">«Ethernet0 Properties»</span>. Her så trykker du på <span class="boldText">«Internet Protocol Version 4(TCP/IPv4)»</span>, og deretter på <span class="boldText">«Properties»</span>.</p>
+                <img class="image" src="../IMG/s21.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Her så velger du <span class="boldText">«Use the following IP address:»</span> og skriver inn nettverks detajlene. <span class="boldText">OBS: Du kommer til å ha annerledes informasjon enn meg.</span> </p>
+                <p class="centerUnderTitle">
+                    <br><span class="boldText">FØLGENDE IP DETALJER:</span>
+                    <br><span class="boldText">IP Address:</span> 10.12.elevnr.unikIP
+                    <br><span class="boldText">Subnet Mask:</span> 255.255.255.0
+                    <br><span class="boldText">Default Gateway:</span> 10.12.elevnr.1
+                    <br><span class="boldText">Preferred DNS Server:</span> 10.10.1.30
+                    <br>Når du er ferdig, trykker du på «OK».
+                    </p>
+                <img class="image" src="../IMG/s22.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Lukk igjen <span class="boldText">«Ethernet properties»</span> fanen, så burde du få en windows notifikasjon om du vil at andre nettverk vil finne deg, trykk på <span class="boldText">«Yes»</span>, her. Nå kan du også sjekke i nederst høyre hjørne om serveren har nettverk.</p>
+                <img class="image" src="../IMG/s23.png" alt="Bilde visning av det som blir sagt på tekst">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="centerUnderTitle">Fortsett til neste steg</p>
+                <a href="../HTML/DNS.html">
+                    <div class="LinkBox NextButton">3.  >> INSTALLERE DNS</div>
+                </a>
             </div>
 
           </div>

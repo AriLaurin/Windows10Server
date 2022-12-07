@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--Scripts-->
+    <script defer src="../JS/script.js"></script>
+
     <!--CSS Links-->
     <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/infopage.css">
-    <link rel="stylesheet" href="../CSS/mediaQueries.css">
+    <link rel="stylesheet" href="../CSS/MQinfopage.css">
 
     <!--Fonts-->
     <style>
@@ -42,13 +45,44 @@
 
     <div class="right-box">
         <hr>
+        <p id="ScrollBtn" onclick="topFunction()" title="Go to top">< TILBAKE TIL TOPPEN ></p>
     </div>
         </div>
         <div class="center">
             <div class="center-list">
-                <h1 id="titleThin" class="centerTitle">HOVED TITEL</h1>
+                <h1 id="titleThin" class="centerTitle">INSTALLERE ADDS</h1>
                 <hr id="centerLine">
-                <p class="centerUnderTitle">Undertittel, beskrivelse</p>
+
+                <p class="centerUnderTitle">Nå skal vi installere ADDS <span class="boldText">(Active Diretory Domain Services)</span>. Dette gjør vi ved å navigere til Dashboard, så trykker du på <span class="boldText">«Add Roles and Features»</span>.</p>
+                <img class="image" src="../IMG/s26.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Naviger til <span class="boldText">«Server Roles»</span>, og trykk på <span class="boldText">«Active Directory Domain Services»</span> i rolle listen. Så trykker du på <span class="boldText">«Add Features»</span>, og trykk på next helt til du kan trykke på install. <span class="boldText">(Trykk da på install når du kan)</span></p>
+                <img class="image" src="../IMG/s27.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Nå som ADDS er installert, så lukker du installisjons vinduet, og navigerer til <span class="boldText">«AD DS»</span> fanen. Deretter så trykker du på <span class="boldText">«More…»</span> som står sammen med den gule varsels boksen. Så burde du se denne fanen åpne, og trykk på <span class="boldText">«Promote this server to a domain…»</span>.</p>
+                <img class="image" src="../IMG/s28.png" alt="Bilde visning av det som blir sagt på tekst">
+                
+                <p class="centerUnderTitle">Når denne fanen åpner seg, så bør du allerede være på <span class="boldText">«Deployment Configuration»</span>, hvor du da skal trykke på <span class="boldText">«Add a new forest»</span>. Her kan du da skrive valgfritt root domene navn som du bør notere ned for senere. Dette er navnet vi må gi til klienten når den skal koble seg til domenet. Etter at du har skrevet inn domene navnet, så går vi videre ved å trykke på <span class="boldText">«Next»</span>.</p>
+                <img class="image" src="../IMG/s29.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Her på <span class="boldText">«Domain Controller Options»</span>, så lager du et passord, noter dette ned også. Deretter så trykker du på <span class="boldText">«Next»</span> helt til du kommer til <span class="boldText">«Prerequisites Check»</span>.</p>
+                <img class="image" src="../IMG/s30.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Når du er på <span class="boldText">«Prerequisites Check»</span>, scroll ned på <span class="boldText">«View Result»</span> lista og sjekk at den siste meldingen er grønn, slik som på bildet. Så trykker du på <span class="boldText">«Install»</span>. Når den er ferdig installert, så kommer serveren til å restarte seg selv, la den gjøre det.</p>
+                <img class="image" src="../IMG/s31.png" alt="Bilde visning av det som blir sagt på tekst">
+
+                <p class="centerUnderTitle">Etter at serveren har startet på nytt, hvis brukernavnet ditt ser slikt ut <span class="boldText">(NETBIOS Navn\Konto Navn)</span> og du kan logge deg in, så har AD DS blitt installert.</p>
+                <img class="image" src="../IMG/s32.png" alt="Bilde visning av det som blir sagt på tekst">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="centerUnderTitle">Fortsett til neste steg</p>
+                <a href="../HTML/DHCP.html">
+                  <div class="LinkBox NextButton">5.  >> INSTALLERE DHCP</div>
+              </a>
+
             </div>
 
           </div>
