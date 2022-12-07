@@ -88,5 +88,9 @@
     .NextButton{
         width:19em;
     }
+    #ScrollBtn{
+        width: 5em;
+        text-align: left;
+    }
 }
 

@@ -230,7 +230,6 @@ a{
 
 .infoVideos{
     width: 55em;
-    padding-bottom: 10vh;
 }
 
 .boldText{
@@ -253,4 +252,17 @@ a{
 #ScrollBtn:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+.TSTitle{
+  width: 10em;
+}
+
+.TSTitle:hover{
+  color:#7D1128;
+  cursor:pointer;
 }
