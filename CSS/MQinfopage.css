@@ -90,7 +90,40 @@
     }
     #ScrollBtn{
         width: 5em;
-        text-align: left;
+    }
+
+    .text-primary{
+        font-size: 1em;
+    }
+
+    .line{
+        width: 14em;
+    }
+
+    .percentText{
+        font-size: 1em;
+    }
+
+    .percentNumber{
+        font-size: 2em;
+    }
+
+    .quizTitle{
+        font-size: 1.5em;
+        max-width: 13.5em;
+    }
+
+    .quizQ{
+        font-size: 1em;
+    }
+
+    .form-check-label{
+        font-size: 0.9em;
+        max-width: 0.5em;
+    }
+
+    .btn-light{
+        max-width: 15em;
     }
 }
 

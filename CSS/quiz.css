@@ -1,15 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
-.css-transitions-only-after-page-load * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-  }
-
 .gridstyle {  
     display: grid;
     gap: 0px 0px;
@@ -54,6 +42,7 @@ html {
   .center {
     height: fit-content;
     display: grid; 
+    height: 100vh;
     grid-template-columns: 1fr 2fr 1fr; 
     gap: 0px 20px; 
     grid-template-areas: 
@@ -64,27 +53,18 @@ html {
     background: #302B27;
   }
 
-
   .center-list {
      grid-area: center-list;
      height: max-content;
      }
 
-
-
-  #quizButton{
-    margin-top: 5vh;
-    margin-left: 13vw;
-  }
   
   .footer {
     position: relative;
     display: grid;
     height: fit-content;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
+
     grid-template-areas:
       "F1 F2 F3"
       "F1 F2 F3"
@@ -103,8 +83,6 @@ html {
   
   .F3 { grid-area: F3; }
 
-  
-
   #detailsTitle{
     color: #F4F2F3;
     font-family: 'Catamaran', sans-serif;
@@ -119,45 +97,82 @@ html {
     width: 3em;
   }
 
-#titleThin{
-    font-weight: normal;
-}
-
-hr{
+  hr{
     color:#F4F2F3;
     margin: 0px;
     opacity: 50%;
     white-space: none;
 }
 
-#cbTitle{
+a{
+    text-decoration: none;
+  }
+
+/*Info page navbar*/
+#returnTitle{
+    padding-top: 0.9vh;
+    padding-left: 2vw;
+    color:#F4F2F3;
+    font-family: 'Catamaran', sans-serif;
+    width: 120px;
+    transition: ease 0.5s;
+  }
+  
+  #returnTitle:hover{
+    text-decoration: underline;
+  }
+
+  #footerLogo{
+    width: 3em;
+    padding-top: 2vh;
+  }
+  
+  #footer2Title{
+    color:#F4F2F3;
+    font-family: 'Catamaran', sans-serif;
+    padding-bottom: 3vh;
+  }
+
+  .text-primary{
     color: #F4F2F3;
     font-family: 'Catamaran', sans-serif;
-    font-weight: none;
-    text-align: center;
-    padding: 0.5em;
-}
+    font-size: 3em;
+    padding-top: 2vh;
+  }
 
-.centerOverheadTitle{
-  color: #F4F2F3;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: bold;
-  font-size: 2em;
-  padding-top: 13vh;
-}
+  .percentText{
+    color: #F4F2F3;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.5em;
+  }
 
-.centerOverheadPara{
-  color: #F4F2F3;
-  font-family: Karla;
-  font-size: 18px;
-  padding-bottom: 2.5vh;
-}
+  .quizTitle{
+    color:#F4F2F3;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.5em;
+    
+  }
 
-#overheadBR{
-  margin-bottom: 2vh;
-}
+  .percentNumber{
+    color:#7D1128;
+    font-size: 3em;
+  }
 
-.LinkBox{
+  .quizQ{
+    color:#F4F2F3;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+  }
+
+  .form-check-label{
+    color:#F4F2F3;
+    font-family: 'Catamaran', sans-serif;
+  }
+
+  .LinkBox{
     grid-area: center;
     width:28em;
     background:#7D1128;
@@ -168,6 +183,8 @@ hr{
     padding: 1em;
     transition: ease 0.5s;
     margin-bottom: 1.5em;
+    border: none;
+    margin-top: 3vh;
 }
 
 .LinkBox:hover{
@@ -178,95 +195,3 @@ hr{
     box-shadow: #F4F2F3 0px 0px 0px 2px inset, #7D1128 10px -10px 0px -3px, #7D1128 10px -10px;
 }
 
-
-#footerLogo{
-  width: 3em;
-  padding-top: 2vh;
-}
-
-#footer2Title{
-  color:#F4F2F3;
-  font-family: 'Catamaran', sans-serif;
-  padding-bottom: 3vh;
-}
-
-a{
-  text-decoration: none
-}
-
-/*Info page navbar*/
-#returnTitle{
-  padding-top: 0.9vh;
-  padding-left: 2vw;
-  color:#F4F2F3;
-  font-family: 'Catamaran', sans-serif;
-  width: 120px;
-  transition: ease 0.5s;
-}
-
-#returnTitle:hover{
-  text-decoration: underline;
-}
-
-.centerTitle{
-    color: #F4F2F3;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 2em;
-    margin-top: 10vh;
-    
-}
-
-#centerLine{
-    width: 45em;
-}
-
-.centerUnderTitle{
-    color: #F4F2F3;
-    font-family: 'Catamaran', sans-serif;
-    font-size: 1.2em;
-    padding-top:1vh;
-    padding-bottom: 1vh;
-}
-
-.infoVideos{
-    width: 55em;
-}
-
-.boldText{
-    font-weight: bold;
-}
-
-.image{
-    padding-bottom: 10vh;
-}
-
-#ScrollBtn{
-  padding-top: 0.9vh;
-  padding-left: 22vw;
-  color:#F4F2F3;
-  font-family: 'Catamaran', sans-serif;
-  width: 165px;
-  transition: ease 0.5s;
-}
-
-#ScrollBtn:hover{
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.hidden{
-  display: none;
-}
-
-.TSTitle{
-  width: 10em;
-}
-
-.TSTitle:hover{
-  color:#7D1128;
-  cursor:pointer;
-}
-
-.bigimage{
-  width:80em
-}
